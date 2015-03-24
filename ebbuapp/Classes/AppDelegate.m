@@ -42,7 +42,7 @@
 
 
 
-#import "PushApps.h"
+#import "CDVPushApps.h"
 
 #pragma mark - Push Notifications
 

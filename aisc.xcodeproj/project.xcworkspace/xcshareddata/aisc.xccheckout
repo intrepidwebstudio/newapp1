@@ -6,31 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>25F5E2A1-6FD6-41DA-BFD1-5D86C676460A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>aisc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2E3E6604C9111ECBC284A66EBCC439C9A2E77286</key>
-		<string>https://github.com/intrepidwebstudio/aisc-app.git</string>
+		<key>4D0B79A2043325B3B79163FD031503E3A3E32FB1</key>
+		<string>https://github.com/intrepidwebstudio/newapp1.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>aisc.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2E3E6604C9111ECBC284A66EBCC439C9A2E77286</key>
-		<string>www/</string>
+		<key>4D0B79A2043325B3B79163FD031503E3A3E32FB1</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/intrepidwebstudio/aisc-app.git</string>
+	<string>https://github.com/intrepidwebstudio/newapp1.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2E3E6604C9111ECBC284A66EBCC439C9A2E77286</string>
+	<string>4D0B79A2043325B3B79163FD031503E3A3E32FB1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2E3E6604C9111ECBC284A66EBCC439C9A2E77286</string>
+			<string>4D0B79A2043325B3B79163FD031503E3A3E32FB1</string>
 			<key>IDESourceControlWCCName</key>
-			<string>www</string>
+			<string>aiscfull</string>
 		</dict>
 	</array>
 </dict>
