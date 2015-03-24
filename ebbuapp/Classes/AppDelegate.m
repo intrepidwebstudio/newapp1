@@ -25,14 +25,56 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
+
+
+
+
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
+
 #import <Cordova/CDVPlugin.h>
+
 
 @implementation AppDelegate
 
 @synthesize window, viewController;
+
+
+
+#import "PushApps.h"
+
+#pragma mark - Push Notifications
+
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [[PushAppsManager sharedInstance] didRegisterUserNotificationSettings:notificationSettings];
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    [[PushAppsManager sharedInstance] handleActionWithIdentifier:identifier forRemoteNotification:userInfo
+                                               completionHandler:completionHandler];
+}
+#endif
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Notify PushApps of a successful registration.
+    [[PushAppsManager sharedInstance] updatePushToken:deviceToken];
+}
+
+// Gets called when a remote notification is received while app is in the foreground.
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [[PushAppsManager sharedInstance] handlePushMessageOnForeground:userInfo];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    // keeps you up to date with any errors during push setup.
+    [[PushAppsManager sharedInstance] updatePushError:error];
+}
 
 - (id)init
 {
